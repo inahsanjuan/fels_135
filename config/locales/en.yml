@@ -20,4 +20,26 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  title:
+    framgia: "Framgia E-Learning"
+  static_pages:
+    about: "About"
+    content_about: "This is the Framgia E-Learning"
+    contact: "Contact"
+    content_contact: "Contact to the Framgia E-learning"
+    help: "Help"
+    content_help: "Get help on Framgia E-Learning"
+    content_home_one: "Welcome to the Framgia E-Learning"
+    content_home_two: "This is the home page for the Framgia E-Learning"
+    content_home_three: "Sign up now!"
+
+  footer:
+    content_footer: "The Framgia E-Learning"
+    about: "About"
+    contact: "Contact"
+
+  header:
+    content_header: "Framgia E-Learning"
+    home: "Home"
+    help: "Help"
+    login: "Log in"
