@@ -43,3 +43,11 @@ en:
     home: "Home"
     help: "Help"
     login: "Log in"
+    users: "Users"
+    profile: "Profile"
+    setting: "Setting"
+    logout: "Logout"
+  sessions:
+    login: "Login"
+    danger: "Invalid email/password combination"
+    log-in: "Log-in"
