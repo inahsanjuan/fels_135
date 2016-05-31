@@ -51,3 +51,8 @@ en:
     login: "Login"
     danger: "Invalid email/password combination"
     log-in: "Log-in"
+  users:
+    edituser: "Edit users"
+    savechanges: "Save changes"
+    editprofile: "Edit your profile"
+    profileupdated: "Profile Updated"
