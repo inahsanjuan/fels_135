@@ -56,3 +56,12 @@ en:
     savechanges: "Save changes"
     editprofile: "Edit your profile"
     profileupdated: "Profile Updated"
+    new: "Sign up"
+    content_new: "This will be a signup page for new users."
+    content_new_two: "Create my account"
+    content_new_three: "Confirmation"
+  controllers:
+    create: "Welcome to the Framgia E-Learning"
+  shared:
+    messages: "The form contains "
+    messages_error: "error"
