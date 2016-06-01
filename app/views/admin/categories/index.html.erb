@@ -1,0 +1,10 @@
+<% provide :title, t("admin.allcategory") %>
+<h1><%= t "admin.allcategory" %></h1>
+<ul class="categories">
+  <% @categories.each do |category| %>
+    <li>
+      <%= category.name %>
+    </li>
+  <% end %>
+</ul>
+<%= will_paginate @categories %>
