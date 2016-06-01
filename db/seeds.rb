@@ -1,3 +1,4 @@
 
-User.create!(name: "tuyen", email: "tuyen@gmail.com",
-  password: "foobar", password_confirmation: "foobar")
+User.create!(name: "tuyenhong", email: "tuyenhong@gmail.com",
+  password: "foobar", password_confirmation: "foobar", admin: "true")
+Category.create!(name: "Basic Lesson")

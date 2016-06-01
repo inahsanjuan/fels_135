@@ -47,6 +47,8 @@ en:
     profile: "Profile"
     setting: "Setting"
     logout: "Logout"
+    word: "Word"
+    category: "Category"
   sessions:
     login: "Login"
     danger: "Invalid email/password combination"
@@ -65,3 +67,8 @@ en:
   shared:
     messages: "The form contains "
     messages_error: "error"
+  admin:
+    addcategory: "Add category"
+    allcategory: "All Categories"
+    addword: "Add word"
+    allword: "All word"

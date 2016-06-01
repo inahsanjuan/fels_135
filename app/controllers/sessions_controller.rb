@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
       log_in user
       redirect_to user
     else
-      flash[:danger]= I18n.t "danger"
+      flash[:danger]= I18n.t "sessions.danger"
       render :new
     end
   end

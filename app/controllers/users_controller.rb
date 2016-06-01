@@ -1,4 +1,8 @@
 class UsersController < ApplicationController
+  def index
+    @user = User.all
+  end
+
   def show
   end
 
@@ -21,7 +25,7 @@ class UsersController < ApplicationController
 
   def update
     if current_user.update_attributes user_params
-      flash[:success ] = t "profileupdated"
+      flash[:success ] = I18n.t "users.profileupdated"
       redirect_to current_user
     else
       render :edit
