@@ -21,7 +21,7 @@
                 <%= t "header.category" %> <b class="caret"></b>
               </a>
               <ul class="dropdown-menu">
-                <li><%= link_to t("admin.addcategory"), "#" %></li>
+                <li><%= link_to t("admin.addcategory"), new_admin_category_path %></li>
                 <li><%= link_to t("admin.allcategory"), admin_categories_path %></li>
               </ul>
             </li>
@@ -47,4 +47,3 @@
     </nav>
   </div>
 </header>
-
