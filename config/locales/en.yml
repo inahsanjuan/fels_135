@@ -72,3 +72,8 @@ en:
     allcategory: "All Categories"
     addword: "Add word"
     allword: "All word"
+    categoryupdated: "Category updated !"
+    editcategory: "Edit Category"
+    savechanges: "Save changes"
+    edit: "Edit"
+    correct: "you are not admin"
