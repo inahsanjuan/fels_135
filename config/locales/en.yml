@@ -64,6 +64,9 @@ en:
     content_new_three: "Confirmation"
   controllers:
     create: "Welcome to the Framgia E-Learning"
+    admin:
+      messages: "Create Category Success!"
+      messages_2: "Cannot Create Category!"
   shared:
     messages: "The form contains "
     messages_error: "error"
@@ -81,3 +84,7 @@ en:
     deletecategory: "Category Deleted !"
     call: "You sure"
     calllogin: "please log in !"
+    messages: "Create Category Success!"
+    categories:
+      new: "Add Category"
+      create_new_category: "Create new Category"

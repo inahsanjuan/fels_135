@@ -1,17 +1,25 @@
 class Admin::CategoriesController < ApplicationController
-  before_action :logged_in_user, only: [:edit, :update, :destroy, :index]
+  before_action :logged_in_user
+  before_action :correct_admin, except: [:show, :index]
   before_action :load_category, only: [:show, :edit, :update]
-  before_action :correct_admin, only: [:edit, :update, :destroy]
+
   def index
     @categories = Category.paginate page: params[:page]
   end
 
-  def show
-
+  def new
+    @category = Category.new
   end
 
-  def edit
-
+  def create
+    @category = Category.new category_params
+    if @category.save
+      flash[:success] = t "controllers.admin.messages"
+      redirect_to admin_root_url
+    else
+      flash[:danger] = t "controllers.admin.messages_2"
+      render :new
+    end
   end
 
   def update
@@ -34,6 +42,8 @@ class Admin::CategoriesController < ApplicationController
   def load_category
     @category = Category.find params[:id]
   end
+
+  private
 
   def category_params
     params.require(:category).permit :name
