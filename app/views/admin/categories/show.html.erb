@@ -7,6 +7,13 @@
         <%= link_to "addword", new_admin_category_word_path(@category),
           class: "btn btn-lg btn-primary" %>
       </h1>
+      <ol>
+        <% @words.each do |word| %>
+          <li>
+            <%= link_to word.content, admin_category_word_path(@category, word)%>
+          </li>
+        <% end %>
+      </ol>
     </section>
   </aside>
   <div class="col-md-6">

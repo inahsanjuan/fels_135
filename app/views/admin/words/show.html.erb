@@ -1,0 +1,21 @@
+<% provide :title, @word.content %>
+<div class="row">
+  <aside class="col-md-4">
+    <section class="category_info">
+      <h1>
+        <%= @word.content %>
+      </h1>
+    </section>
+  </aside>
+</div>
+<div class="row">
+  <aside class="col-md-4">
+    <table class="table table-bordered table-hover">
+      <% @word_answers.each do |answer| %>
+        <tr>
+          <td><%= answer.content %></td>
+        </tr>
+      <% end %>
+    </table>
+  </aside>
+</div>
