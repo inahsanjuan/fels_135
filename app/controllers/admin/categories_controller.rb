@@ -7,6 +7,12 @@ class Admin::CategoriesController < ApplicationController
     @categories = Category.paginate page: params[:page]
   end
 
+  def show
+  end
+
+  def edit
+  end
+
   def new
     @category = Category.new
   end
@@ -42,8 +48,6 @@ class Admin::CategoriesController < ApplicationController
   def load_category
     @category = Category.find params[:id]
   end
-
-  private
 
   def category_params
     params.require(:category).permit :name
