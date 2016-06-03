@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get "signup" => "users#new"
   namespace :admin do
     root "categories#index"
+    resources :users, only: [:destroy]
     resources :categories do
       resources :words
     end
