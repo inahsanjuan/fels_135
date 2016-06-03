@@ -20,3 +20,13 @@ input {
     border-bottom: 1px solid $gray-lighter;
   }
 }
+.users {
+  list-style: none;
+  margin: 0;
+  li {
+    position: absolute;
+    overflow: auto;
+    padding: 10px 0;
+    border-bottom: 1px solid $gray-lighter;
+  }
+}
