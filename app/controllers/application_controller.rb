@@ -5,14 +5,14 @@ class ApplicationController < ActionController::Base
   private
   def correct_admin
     unless current_user.admin?
-      flash[:danger] = I18n.t "admin.correct"
+      flash[:danger] = t "admin.correct"
       redirect_to root_url
     end
   end
 
   def logged_in_user
     unless logged_in?
-      flash[:danger] = I18n.t "admin.calllogin"
+      flash[:danger] = t "admin.calllogin"
       redirect_to login_url
     end
   end

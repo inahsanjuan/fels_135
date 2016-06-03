@@ -52,7 +52,7 @@ en:
   sessions:
     login: "Login"
     danger: "Invalid email/password combination"
-    log-in: "Log-in"
+    log-in: "Log in"
   users:
     edituser: "Edit users"
     savechanges: "Save changes"
@@ -96,3 +96,5 @@ en:
     remove: "Remove"
     addfail: "Add fail !"
     allusers: "All users"
+    deleteuser: "User Deleted !"
+    deletefail: "Delete Fail"
