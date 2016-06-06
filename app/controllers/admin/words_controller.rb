@@ -2,6 +2,7 @@ class Admin::WordsController < ApplicationController
   before_action :logged_in_user
   before_action :correct_admin
   before_action :load_category, only: [:create]
+  before_action :load_word, except: [:index, :new, :create]
 
   def show
     @word = Word.find params[:id]
@@ -16,13 +17,36 @@ class Admin::WordsController < ApplicationController
   def create
     @word = @category.words.new word_params
     if @word.save
-      flash[:success] = I18n.t "admin.addsuccess"
+      flash[:success] = t "admin.addsuccess"
       redirect_to root_path
     else
-      flash[:danger] = I18n.t "admin.addfail"
+      flash[:danger] = t "admin.addfail"
       render :new
     end
   end
+
+  def destroy
+    if @word.destroy
+      flash[:success] = t "admin.deleted"
+    else
+      flash[:danger] = t "deletefail"
+    end
+    redirect_to :back
+  end
+
+  def edit
+  end
+
+  def update
+    if @word.update_attributes word_params
+      flash[:success] = t "admin.wordupdated"
+      redirect_to :back
+    else
+      flash[:danger] = t "admin.updatefail"
+      render :edit
+    end
+  end
+
   private
   def word_params
     params.require(:word).permit :content, :category_id,
@@ -31,5 +55,9 @@ class Admin::WordsController < ApplicationController
 
   def load_category
     @category = Category.find params[:category_id]
+  end
+
+  def load_word
+    @word = Word.find params[:id]
   end
 end

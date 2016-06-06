@@ -10,13 +10,16 @@
       <ol>
         <% @words.each do |word| %>
           <li>
-            <%= link_to word.content, admin_category_word_path(@category, word)%>
+            <%= link_to word.content, admin_category_word_path(@category, word) %>
+            <%= link_to t("admin.delete"), admin_category_word_path(@category, word),
+              method: :delete, data: {confirm: t("admin.call")}, class: "btn btn-lg btn-primary" %>
+            <%= link_to t("admin.edit"),edit_admin_category_word_path(@category, word),
+              class: "btn btn-lg btn-primary" %>
           </li>
         <% end %>
       </ol>
     </section>
   </aside>
   <div class="col-md-6">
-
   </div>
 </div>

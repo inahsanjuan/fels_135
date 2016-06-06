@@ -98,6 +98,10 @@ en:
     allusers: "All users"
     deleteuser: "User Deleted !"
     deletefail: "Delete Fail"
+    deleted: "Deleted !"
+    wordupdated: "Word updated !"
+    updatefail: "Update fail !"
+    editword: "Edit word"
   views:
     admin:
       words:
@@ -108,4 +112,3 @@ en:
       categories:
         show:
           views: "views"
-
