@@ -1,7 +1,7 @@
 class Admin::WordsController < ApplicationController
   before_action :logged_in_user
   before_action :correct_admin
-  before_action :load_word, only: [:create]
+  before_action :load_category, only: [:create]
 
   def new
     @word = Word.new
@@ -24,7 +24,7 @@ class Admin::WordsController < ApplicationController
       word_answers_attributes: [:id, :content, :correct_answer]
   end
 
-  def load_word
+  def load_category
     @category = Category.find params[:category_id]
   end
 end
