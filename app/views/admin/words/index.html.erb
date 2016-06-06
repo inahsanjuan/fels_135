@@ -1,0 +1,18 @@
+<% provide :title, t("views.admin.words.index.allword") %>
+<div class="row">
+  <aside class="col-md-8">
+    <h1><%= t "views.admin.words.index.allword" %></h1>
+    <ul class="words">
+      <% @words.each do |word| %>
+        <li>
+          <%= word.content %>
+          <%= link_to t("views.admin.words.index.views"), [:admin, word] %>
+        </li>
+      <% end %>
+    </ul>
+  </aside>
+  <aside class="col-md-4">
+    <%= link_to t("views.admin.words.index.newword"), "#", class: "btn btn-primary" %>
+  </aside>
+</div>
+<%= will_paginate @words %>

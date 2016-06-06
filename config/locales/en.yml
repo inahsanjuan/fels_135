@@ -98,3 +98,14 @@ en:
     allusers: "All users"
     deleteuser: "User Deleted !"
     deletefail: "Delete Fail"
+  views:
+    admin:
+      words:
+        index:
+          allword: "All Word"
+          views: "views"
+          newword: "New Word"
+      categories:
+        show:
+          views: "views"
+

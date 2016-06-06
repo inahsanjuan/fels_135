@@ -3,6 +3,11 @@ class Admin::WordsController < ApplicationController
   before_action :correct_admin
   before_action :load_category, only: [:create]
 
+  def show
+    @word = Word.find params[:id]
+    @word_answers = @word.word_answers
+  end
+
   def new
     @word = Word.new
     3.times {@word.word_answers.build}
