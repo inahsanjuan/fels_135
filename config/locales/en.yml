@@ -49,6 +49,7 @@ en:
     logout: "Logout"
     word: "Word"
     category: "Category"
+    account: "Account"
   sessions:
     login: "Login"
     danger: "Invalid email/password combination"
@@ -112,3 +113,11 @@ en:
       categories:
         show:
           views: "views"
+    users:
+      show:
+        category: "Category"
+    categories:
+      index:
+        allcategories: "All Categories"
+        startlesson: "Start Lesson"
+
