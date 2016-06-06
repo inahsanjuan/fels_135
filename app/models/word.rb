@@ -5,5 +5,5 @@ class Word < ActiveRecord::Base
   has_many :word_answers, dependent: :destroy
 
   accepts_nested_attributes_for :word_answers,
-    reject_if: lambda {|attribute| attribute[:word_id].blank?}, allow_destroy: true
+    reject_if: lambda {|attribute| attribute[:content].blank?}, allow_destroy: true
 end
