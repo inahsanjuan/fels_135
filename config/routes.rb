@@ -6,8 +6,13 @@ Rails.application.routes.draw do
   get "login" =>"sessions#new"
   post "login" =>"sessions#create"
   delete "logout" =>"sessions#destroy"
-  resources :users
   resources :categories
+  resources :users do
+    resources :following, only: :index
+    resources :followers, only: :index
+  end
+
+  resources :relationships, only: [:create, :destroy]
   get "signup" => "users#new"
   namespace :admin do
     root "categories#index"
