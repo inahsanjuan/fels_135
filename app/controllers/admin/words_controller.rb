@@ -11,7 +11,7 @@ class Admin::WordsController < ApplicationController
 
   def new
     @word = Word.new
-    3.times {@word.word_answers.build}
+    Settings.build_word_answer.times {@word.word_answers.build}
   end
 
   def create

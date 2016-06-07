@@ -1,0 +1,28 @@
+<% provide :title, t("users.lesson") %>
+<h1>
+  <%= t "users.lesson" %>
+  <%=  @lesson.id %>
+</h1>
+<div class="row">
+  <aside class="col-md-4">
+    <section >
+      <h1>
+        <%= @lesson.category.name %>
+      </h1>
+    </section>
+  </aside>
+</div>
+<div class="row">
+  <section>
+    <% @words.each do |word| %>
+      <%= word.content %>
+      <br/>
+      <% word.word_answers.each do |answer| %>
+        <br>
+        <%= answer.content %>
+        <%= radio_button_tag :correct_answer, answer.content %>
+        <br/><br/>
+      <% end %>
+    <% end %>
+  </section>
+</div>

@@ -6,8 +6,10 @@
       <%= category.name %>
     </li>
     <li>
-      <%=link_to t("views.categories.index.startlesson"), "#",
-        class: "btn btn-primary btn-sm" %>
+      <%= form_tag lessons_path, method: :post do %>
+        <%= hidden_field_tag "lesson[category_id]", category.id  %>
+        <%= submit_tag t("views.categories.index.startlesson"), class: "btn btn-primary btn-lg" %>
+      <% end %>
     </li>
   <% end %>
 </ul>
