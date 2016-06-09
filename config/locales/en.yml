@@ -29,9 +29,9 @@ en:
     content_contact: "Contact to the Framgia E-learning"
     help: "Help"
     content_help: "Get help on Framgia E-Learning"
-    content_home_one: "Welcome to the Framgia E-Learning"
-    content_home_two: "This is the home page for the Framgia E-Learning"
-    content_home_three: "Sign up now!"
+    welcome: "Welcome to the Framgia E-Learning"
+    home_page: "This is the home page for the Framgia E-Learning"
+    signup_now: "Sign up now!"
 
   footer:
     content_footer: "The Framgia E-Learning"
@@ -68,9 +68,16 @@ en:
     admin:
       messages: "Create Category Success!"
       messages_2: "Cannot Create Category!"
+
+    users:
+      following: "Following"
+      followers: "Followers"
   shared:
     messages: "The form contains "
     messages_error: "error"
+    stat:
+      following: "following"
+      followers: "followers"
   admin:
     addcategory: "Add category"
     allcategory: "All Categories"
@@ -116,6 +123,10 @@ en:
     users:
       show:
         category: "Category"
+      showfollow:
+        viewprofile: "View my profile"
+      unfollow: "Unfollow"
+      follow: "Follow"
     categories:
       index:
         allcategories: "All Categories"
