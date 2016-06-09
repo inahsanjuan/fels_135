@@ -1,2 +1,6 @@
 word_size: 5
 build_word_answer: 3
+filter_options:
+  - learned
+  - not_learned
+  - all_words

@@ -132,4 +132,12 @@ en:
       index:
         allcategories: "All Categories"
         startlesson: "Start Lesson"
+    words:
+      index:
+        wordslist: "Words List"
+        all: "All"
+        filterall: "Filter All"
+        learned: "Learned"
+        notlearned: "Not Learned"
+        filter: "Filter"
 
