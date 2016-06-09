@@ -6,4 +6,5 @@ class Word < ActiveRecord::Base
 
   accepts_nested_attributes_for :word_answers,
     reject_if: lambda {|attribute| attribute[:content].blank?}, allow_destroy: true
+  scope :by_ids, ->ids{where id: ids}
 end

@@ -1,0 +1,15 @@
+<% @word_answers.each do |word_answer| %>
+  <div class="panel panel-default col-md-12">
+    <p><%= word_answer.word.content %></p>
+    <hr>
+    <p>
+      <%= word_answer.content %>|
+      <% word_answer.word.word_answers.each do |word_answer| %>
+        <% if word_answer.correct_answer %>
+          <%= word_answer.content %>|
+        <% end %>
+      <% end %>
+      <%= word_answer.correct_answer %>
+    </p>
+  </div>
+<% end %>
