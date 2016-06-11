@@ -1,6 +1,6 @@
 <% provide :title, t("admin.allcategory") %>
-<li><%= link_to t("admin.addcategory"), new_admin_category_path,
-  class: "btn btn-lg btn-primary" %></li>
+  <%= link_to t("admin.addcategory"), new_admin_category_path,
+    class: "btn btn-lg btn-primary" %>
 <h1><%= t "admin.allcategory" %></h1>
 <ul class="categories">
   <% @categories.each do |category| %>
