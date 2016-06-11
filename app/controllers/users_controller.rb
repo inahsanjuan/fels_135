@@ -8,6 +8,7 @@ class UsersController < ApplicationController
 
   def show
     @words = Word.learned(current_user.id)
+    @activities = @user.activities.paginate page: params[:page]
   end
 
   def new

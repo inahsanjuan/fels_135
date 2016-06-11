@@ -3,7 +3,7 @@ class Lesson < ActiveRecord::Base
 
   belongs_to :user
   belongs_to :category
-  after_update :create_activity
+  after_update :create_lessons_activities
 
   has_many :lesson_words
   has_many :words, through: :lesson_words
@@ -28,7 +28,7 @@ class Lesson < ActiveRecord::Base
     self.status = self.status.nil?
   end
 
-  def create_lesson_activities
+  def create_lessons_activities
     create_lesson_activities Settings.activity.learned
   end
 end
