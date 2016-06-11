@@ -7,6 +7,7 @@ class UsersController < ApplicationController
   end
 
   def show
+    @words = Word.learned(current_user.id)
   end
 
   def new
