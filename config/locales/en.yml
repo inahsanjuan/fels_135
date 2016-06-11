@@ -66,10 +66,6 @@ en:
     content_new_three: "Confirmation"
   controllers:
     create: "Welcome to the Framgia E-Learning"
-    admin:
-      messages: "Create Category Success!"
-      messages_2: "Cannot Create Category!"
-
     users:
       following: "Following"
       followers: "Followers"
@@ -93,10 +89,11 @@ en:
     deletecategory: "Category Deleted !"
     call: "You sure"
     calllogin: "please log in !"
-    messages: "Create Category Success!"
+    success: "Create Category Success!"
+    notsuccess: "Cannot Category Success!"
     categories:
-    new: "Add Category"
-    create_new_category: "Create new Category"
+      new: "Add Category"
+      create_new_category: "Create new Category"
     word: "Word"
     add: "Add"
     answer: "Answer"

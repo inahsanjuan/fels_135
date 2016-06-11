@@ -21,10 +21,10 @@ class Admin::CategoriesController < ApplicationController
   def create
     @category = Category.new category_params
     if @category.save
-      flash[:success] = t "controllers.admin.messages"
+      flash[:success] = t "admin.success"
       redirect_to admin_root_url
     else
-      flash[:danger] = t "controllers.admin.messages_2"
+      flash[:danger] = t "admin.notsuccess"
       render :new
     end
   end
