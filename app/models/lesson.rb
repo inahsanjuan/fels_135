@@ -1,10 +1,14 @@
 class Lesson < ActiveRecord::Base
+  include CreateActivity
+
   belongs_to :user
   belongs_to :category
+  after_update :create_activity
 
   has_many :lesson_words
   has_many :words, through: :lesson_words
   has_many :word_answers, through: :lesson_words
+  has_many :activities, dependent: :destroy
 
   accepts_nested_attributes_for :lesson_words,
     reject_if: lambda {|attribute| attribute[:word_id].blank?}, allow_destroy: true
@@ -21,6 +25,10 @@ class Lesson < ActiveRecord::Base
   end
 
   def change_status
-   self.status = self.status.nil?
+    self.status = self.status.nil?
+  end
+
+  def create_lesson_activities
+    create_lesson_activities Settings.activity.learned
   end
 end
