@@ -4,3 +4,7 @@ filter_options:
   - "learned"
   - "not_learned"
   - "alls"
+activity:
+  learned: 1
+  follow: 2
+  unfollow: 3
