@@ -6,6 +6,8 @@
         <%= gravatar_for @user %>
         <%= @user.name %>
       </h1>
+        <%= t "views.users.show.totalwords" %>
+        <%= @words.count %>
     </section>
     <section class="stats">
       <%= render "shared/stats" %>

@@ -124,6 +124,7 @@ en:
     users:
       show:
         category: "Category"
+        totalwords: "Total Words Learned:"
       showfollow:
         viewprofile: "View my profile"
       unfollow: "Unfollow"
