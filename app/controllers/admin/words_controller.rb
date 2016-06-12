@@ -18,7 +18,7 @@ class Admin::WordsController < ApplicationController
     @word = @category.words.new word_params
     if @word.save
       flash[:success] = t "admin.addsuccess"
-      redirect_to root_path
+      redirect_to admin_category_path(@category)
     else
       flash[:danger] = t "admin.addfail"
       render :new

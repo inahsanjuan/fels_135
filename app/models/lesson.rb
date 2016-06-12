@@ -8,8 +8,6 @@ class Lesson < ActiveRecord::Base
   has_many :lesson_words
   has_many :words, through: :lesson_words
   has_many :word_answers, through: :lesson_words
-  has_many :activities, dependent: :destroy
-
   accepts_nested_attributes_for :lesson_words,
     reject_if: lambda {|attribute| attribute[:word_id].blank?}, allow_destroy: true
   before_create :random_words

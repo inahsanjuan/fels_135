@@ -7,17 +7,23 @@
         <%= link_to "addword", new_admin_category_word_path(@category),
           class: "btn btn-lg btn-primary" %>
       </h1>
-      <ol>
+      <table class="table table-striped">
         <% @words.each do |word| %>
-          <li>
-            <%= link_to word.content, admin_category_word_path(@category, word) %>
-            <%= link_to t("admin.delete"), admin_category_word_path(@category, word),
-              method: :delete, data: {confirm: t("admin.call")}, class: "btn btn-lg btn-primary" %>
-            <%= link_to t("admin.edit"),edit_admin_category_word_path(@category, word),
-              class: "btn btn-lg btn-primary" %>
-          </li>
+          <tr>
+            <td>
+              <%= link_to word.content, admin_category_word_path(@category, word) %>
+            </td>
+            <td>
+              <%= link_to t("admin.delete"), admin_category_word_path(@category, word),
+                method: :delete, data: {confirm: t("admin.call")}, class: "btn btn-sm btn-danger" %>
+            </td>
+            <td>
+              <%= link_to t("admin.edit"),edit_admin_category_word_path(@category, word),
+                class: "btn btn-sm btn-info" %>
+            </td>
+          </tr>
         <% end %>
-      </ol>
+      </table>
     </section>
   </aside>
   <div class="col-md-6">

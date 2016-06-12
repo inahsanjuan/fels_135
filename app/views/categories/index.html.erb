@@ -8,7 +8,7 @@
     <li>
       <%= form_tag lessons_path, method: :post do %>
         <%= hidden_field_tag "lesson[category_id]", category.id  %>
-        <%= submit_tag t("views.categories.index.startlesson"), class: "btn btn-primary btn-lg" %>
+        <%= submit_tag t("views.categories.index.startlesson"), class: "btn btn-primary btn-md" %>
       <% end %>
     </li>
   <% end %>

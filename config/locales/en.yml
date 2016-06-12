@@ -64,6 +64,7 @@ en:
     content_new: "This will be a signup page for new users."
     content_new_two: "Create my account"
     content_new_three: "Confirmation"
+    notdelete: "you can not delete!"
   controllers:
     create: "Welcome to the Framgia E-Learning"
     users:

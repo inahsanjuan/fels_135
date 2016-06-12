@@ -1,7 +1,7 @@
 class Admin::CategoriesController < ApplicationController
   before_action :logged_in_user
   before_action :correct_admin, except: [:show, :index]
-  before_action :load_category, only: [:show, :edit, :update]
+  before_action :load_category, only: [:show, :edit, :update, :destroy]
 
   def index
     @categories = Category.paginate page: params[:page]

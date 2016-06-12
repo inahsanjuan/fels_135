@@ -7,7 +7,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @words = Word.learned(current_user.id)
+    @words = Word.learned(@user.id)
     @activities = @user.activities.paginate page: params[:page]
   end
 
@@ -19,7 +19,7 @@ class UsersController < ApplicationController
     @user = User.new user_params
     if @user.save
       flash[:success] = I18n.t "controllers.create"
-      redirect_to @user
+      redirect_to root_path
     else
       render :new
     end
