@@ -142,3 +142,9 @@ en:
       save: "Save !"
       score: "Your score:"
       fail: "You haven't do lesson!"
+    activities:
+      noactivities: "No activities !"
+      learned: "Learned"
+      follow: "Follow"
+      unfollow: "Unfollow"
+      ago: "ago"
