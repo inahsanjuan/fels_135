@@ -11,14 +11,9 @@ input, textarea, select, .uneditable-input {
 input {
   height: auto !important;
 }
-.categories {
-  list-style: none;
-  margin: 0;
-  li {
-    overflow: auto;
-    padding: 10px 0;
-    border-bottom: 1px solid $gray-lighter;
-  }
+
+input.btn.btn-primary.btn-md {
+  width: 100px
 }
 .users {
   list-style: none;
@@ -33,3 +28,12 @@ input {
 .activities li{
   margin-bottom: 10px
 }
+.col-md-12.lesson_form {
+  border: 1px solid;
+  margin-bottom :10px
+}
+input.btn.btn-primary {
+  margin-top: 10px
+}
+
+

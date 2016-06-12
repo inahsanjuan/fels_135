@@ -13,7 +13,7 @@
       <%= render "shared/stats" %>
     </section>
   </aside>
-  <dir class="col-md-8">
+  <div class="col-md-8">
     <%= render "follow_form" if logged_in? %>
     <% if @user.activities.any? %>
       <h3> <%= t "activities" %> (<%= @user.activities.count %>)</h3>

@@ -1,10 +1,10 @@
 <li>
-  <% if logged_in? && ((current_user.following?(@user)) || current_user.is_user?(@user)) %>
+  <% if logged_in? && (current_user.following?(@user) || current_user.is_user?(@user)) %>
     <%= link_to gravatar_for activity.user %>
     <%= link_to activity.user.name, activity.user %>
     <% if activity.action_type == Settings.activity.learned %>
       <%= t("views.activities.learned") %>
-      <%= activity.load_lesson.lesson_words.correct_answers.count %>|
+      <%= activity.load_lesson.lesson_words.count %>|
       <%= activity.load_lesson.category.name %>|
     <% elsif activity.action_type == Settings.activity.follow %>
       <%= t("views.activities.follow") %>|
