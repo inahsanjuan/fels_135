@@ -21,7 +21,7 @@
         <%= t "activities" %> (<%= @user.activities.count %>)
       </h3>
       <ol class="activities">
-        <%= render @user.activities %>
+        <%= render @activities %>
       </ol>
     <% end %>
       <%= will_paginate @activities %>

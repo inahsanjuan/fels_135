@@ -147,6 +147,8 @@ en:
     activities:
       noactivities: "No activities !"
       learned: "Learned"
+      learning: "learning"
+      words: "words"
       follow: "Follow"
       unfollow: "Unfollow"
       ago: "ago"

@@ -8,3 +8,4 @@ activity:
   learned: 1
   follow: 2
   unfollow: 3
+  learning: 4
