@@ -16,10 +16,14 @@
   <div class="col-md-8">
     <%= render "follow_form" if logged_in? %>
     <% if @user.activities.any? %>
-      <h3> <%= t "activities" %> (<%= @user.activities.count %>)</h3>
+    <% if logged_in? && (current_user.following?(@user) || current_user.is_user?(@user)) %>
+      <h3>
+        <%= t "activities" %> (<%= @user.activities.count %>)
+      </h3>
       <ol class="activities">
         <%= render @user.activities %>
       </ol>
+    <% end %>
       <%= will_paginate @activities %>
     <% else %>
       <%= t "views.activities.noactivities" %>
