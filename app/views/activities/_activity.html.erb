@@ -3,14 +3,18 @@
     <%= link_to activity.user.name, activity.user %>
     <% if activity.action_type == Settings.activity.learned %>
       <%= t("views.activities.learned") %>
-      <%= activity.load_lesson.lesson_words.count %>|
-      <%= activity.load_lesson.category.name %>|
+      <%= activity.load_lesson.lesson_words.correct_answers.count %>|
+      <%= t("views.activities.words") %>
+      <%=link_to activity.load_lesson.category.name, activity.load_lesson %>|
+    <% elsif  activity.action_type == Settings.activity.learning %>
+       <%= t("views.activities.learning") %>
+       <%=link_to activity.load_lesson.category.name, activity.load_lesson %>|
     <% elsif activity.action_type == Settings.activity.follow %>
       <%= t("views.activities.follow") %>|
-      <%= link_to activity.load_user.name, activity.load_user %>
-    <% else %>
+      <%= link_to activity.load_user.name %>
+    <% else%>
       <%= t("views.activities.unfollow") %>|
-      <%= link_to activity.load_user.name, activity.load_user %>
+      <%= link_to activity.load_user.name %>
     <% end %>
     <%= time_ago_in_words(activity.created_at) %>
     <%= t("views.activities.ago") %>
