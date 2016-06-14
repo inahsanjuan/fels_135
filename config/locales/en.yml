@@ -54,6 +54,7 @@ en:
     login: "Login"
     danger: "Invalid email/password combination"
     log-in: "Log in"
+    success: "Success"
   users:
     lesson: "Lesson"
     edituser: "Edit users"
